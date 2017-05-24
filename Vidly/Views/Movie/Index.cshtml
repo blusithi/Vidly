@@ -1,0 +1,34 @@
+﻿@model Vidly.ViewModel.MovieViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+<div class="table-responsive">
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th style="text-align:center">Movies</th>
+            </tr>
+
+
+        </thead>
+        <tbody>
+            @if (Model.Movies.Count == 0)
+            {
+                <tr><td> No Movies on Database</td></tr>
+            }
+            else
+            {
+                foreach (var customer in Model.Movies)
+                {
+                    <tr><td> @Html.ActionLink(customer.Name, "Edit", new { Id = customer.Id }, null) </td></tr>
+
+                }
+
+            }
+
+        </tbody>
+    </table>
+    </div>
