@@ -1,4 +1,4 @@
-﻿@model Vidly.ViewModel.CustomerViewModel
+﻿@model IEnumerable<Vidly.Models.Customer>
 @{
     ViewBag.Title = "Movies";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -15,13 +15,13 @@
 
     </thead>
     <tbody>
-        @if (Model.Customers.Count == 0)
+        @if (!Model.Any())
         {
             <tr><td> No Movies on Database</td></tr>
         }
         else
         {
-            foreach (var customer in Model.Customers)
+            foreach (var customer in Model)
             {
                 <tr><td> @Html.ActionLink(customer.Name, "Edit", new { Id = customer.Id }, null) </td></tr>
 
