@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201705250904281_RenamedColumn.Designer.cs">
       <DependentUpon>201705250904281_RenamedColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705281738226_ApplyAnnotations.cs" />
+    <Compile Include="Migrations\201705281738226_ApplyAnnotations.Designer.cs">
+      <DependentUpon>201705281738226_ApplyAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -330,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705250904281_RenamedColumn.resx">
       <DependentUpon>201705250904281_RenamedColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705281738226_ApplyAnnotations.resx">
+      <DependentUpon>201705281738226_ApplyAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

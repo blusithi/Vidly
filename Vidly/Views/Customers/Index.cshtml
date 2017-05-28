@@ -10,6 +10,7 @@
     <thead>
         <tr>
             <th style="text-align:center">Customers</th>
+            <th style="text-align:center">Discount Rate</th>
         </tr>
         
 
@@ -23,8 +24,10 @@
         {
             foreach (var customer in Model)
             {
-                <tr><td> @Html.ActionLink(customer.Name, "Edit", new { Id = customer.Id }, null) </td></tr>
-
+                <tr><td> @Html.ActionLink(customer.Name, "Edit", new { Id = customer.Id }, null) </td>
+                    <td>@customer.MembershipType.DiscountRate%</td>
+                </tr>
+              
             }
 
         }
