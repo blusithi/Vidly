@@ -227,11 +227,36 @@
     <Compile Include="Migrations\201705281738226_ApplyAnnotations.Designer.cs">
       <DependentUpon>201705281738226_ApplyAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706031430398_AddedName.cs" />
+    <Compile Include="Migrations\201706031430398_AddedName.Designer.cs">
+      <DependentUpon>201706031430398_AddedName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706031639103_SeedData.cs" />
+    <Compile Include="Migrations\201706031639103_SeedData.Designer.cs">
+      <DependentUpon>201706031639103_SeedData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706051900559_AddedDateofBirth.cs" />
+    <Compile Include="Migrations\201706051900559_AddedDateofBirth.Designer.cs">
+      <DependentUpon>201706051900559_AddedDateofBirth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706051906315_AddBirthDateData.cs" />
+    <Compile Include="Migrations\201706051906315_AddBirthDateData.Designer.cs">
+      <DependentUpon>201706051906315_AddBirthDateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706052016097_AddGenreFields.cs" />
+    <Compile Include="Migrations\201706052016097_AddGenreFields.Designer.cs">
+      <DependentUpon>201706052016097_AddGenreFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706052016565_seedGenreData.cs" />
+    <Compile Include="Migrations\201706052016565_seedGenreData.Designer.cs">
+      <DependentUpon>201706052016565_seedGenreData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -337,6 +362,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705281738226_ApplyAnnotations.resx">
       <DependentUpon>201705281738226_ApplyAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706031430398_AddedName.resx">
+      <DependentUpon>201706031430398_AddedName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706031639103_SeedData.resx">
+      <DependentUpon>201706031639103_SeedData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706051900559_AddedDateofBirth.resx">
+      <DependentUpon>201706051900559_AddedDateofBirth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706051906315_AddBirthDateData.resx">
+      <DependentUpon>201706051906315_AddBirthDateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706052016097_AddGenreFields.resx">
+      <DependentUpon>201706052016097_AddGenreFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706052016565_seedGenreData.resx">
+      <DependentUpon>201706052016565_seedGenreData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -25,7 +25,7 @@
             foreach (var customer in Model)
             {
                 <tr><td> @Html.ActionLink(customer.Name, "Edit", new { Id = customer.Id }, null) </td>
-                    <td>@customer.MembershipType.DiscountRate%</td>
+                    <td style="text-align:center">@customer.MembershipType.Name</td>
                 </tr>
               
             }
