@@ -21,7 +21,9 @@
             {
                 foreach (var movie in Model)
                 {
-                    <tr><td> @Html.ActionLink(movie.Name, "Edit", new { Id = movie.Id }, null) </td></tr>
+                    <tr><td> @Html.ActionLink(movie.Name, "Edit", new { Id = movie.Id }, null) </td>
+                        <td style="text-align:center">@movie.Genre.Name</td>
+                    </tr>
                 }
             }
 

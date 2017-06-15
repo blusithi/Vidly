@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModel;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
@@ -12,29 +13,30 @@ namespace Vidly.Controllers
     {
         // GET: Movie
 
-        private IEnumerable<Movie> GetMovies()
-        {
-            var movies = new List<Movie>
-            {
-                new Movie { Name = "Shrek", Id = 1 },
-                new Movie { Name = "Spiderman", Id = 2 }
-            };
+        private ApplicationDbContext _context;
 
-            return movies;
+        public MovieController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
         }
 
         public ViewResult Index()
         {
-            var movies = GetMovies();
+            var movie = _context.Movies.Include(c => c.Genre).ToList();
 
-            return View(movies);
+            return View(movie);
         }
 
 
 
         public ActionResult Edit(int Id)
         {
-            var movie = GetMovies().SingleOrDefault(c => c.Id == Id);
+            var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == Id);
 
             if (movie == null)
                 return HttpNotFound();
