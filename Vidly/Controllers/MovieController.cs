@@ -25,6 +25,40 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+        public ActionResult New()
+        {
+            var genres = _context.Genre.ToList();
+            var viewModel = new MovieFormViewModel
+            {
+                Genres = genres
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            {
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.DateAdded = movie.DateAdded;
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate= movie.ReleaseDate;
+                movieInDb.NumberInStock = movie.NumberInStock;
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movie");
+
+        }
+
+
         public ViewResult Index()
         {
             var movie = _context.Movies.Include(c => c.Genre).ToList();
@@ -36,12 +70,18 @@ namespace Vidly.Controllers
 
         public ActionResult Edit(int Id)
         {
-            var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == Id);
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == Id);
 
             if (movie == null)
                 return HttpNotFound();
 
-            return View(movie);
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = movie,
+                Genres = _context.Genre.ToList()
+            };
+
+            return View("MovieForm", viewModel);
         }
 
         [Route("movie/released/{year:regex(\\d{4})}/{month:range(1, 12)}")]

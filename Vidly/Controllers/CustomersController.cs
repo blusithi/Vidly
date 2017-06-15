@@ -41,13 +41,13 @@ namespace Vidly.Controllers
                 CustomerInDb.IsSubscribedToNewsletter = Customer.IsSubscribedToNewsletter;
                 CustomerInDb.Name = Customer.Name;
                 CustomerInDb.BirthDate = Customer.BirthDate;
-
             }
 
             _context.SaveChanges();
             return RedirectToAction("Index", "Customers");
 
         }
+
         public ActionResult New()
         {
             var membershipType = _context.MembershipType.ToList();
@@ -68,7 +68,6 @@ namespace Vidly.Controllers
 
         public ActionResult Edit(int Id)
         {
-
             var customer = _context.Customers.SingleOrDefault(c => c.Id == Id);
 
             if (customer == null)
