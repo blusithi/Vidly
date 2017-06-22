@@ -13,5 +13,10 @@ namespace Vidly.Models
         public byte DiscountRate { get; set; }
         public string Name { get; set; }
 
+        public static readonly byte Monthly = 1;
+        public static readonly byte Pay_As_You_Go = 2;
+        public static readonly byte Fanatic = 3;
+        public static readonly byte Movie_King = 4;
+
     }
 }

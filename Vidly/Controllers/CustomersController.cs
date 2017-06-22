@@ -28,19 +28,30 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
-        public ActionResult Save(Customer Customer)
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Customer customer)
         {
-            if (Customer.Id == 0)
+
+            if (!ModelState.IsValid)
             {
-                _context.Customers.Add(Customer);
+                var viewModel = new CustomerFormViewModel(customer)
+                {
+                    MembershipTypes = _context.MembershipType.ToList()
+                };
+
+                return View("CustomerForm", viewModel);
+            }
+            if (customer.Id == 0)
+            {
+                _context.Customers.Add(customer);
             }
             else
             {
-                var CustomerInDb = _context.Customers.Single(c => c.Id == Customer.Id);
-                CustomerInDb.MembershipTypeId = Customer.MembershipTypeId;
-                CustomerInDb.IsSubscribedToNewsletter = Customer.IsSubscribedToNewsletter;
-                CustomerInDb.Name = Customer.Name;
-                CustomerInDb.BirthDate = Customer.BirthDate;
+                var CustomerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                CustomerInDb.MembershipTypeId = customer.MembershipTypeId;
+                CustomerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+                CustomerInDb.Name = customer.Name;
+                CustomerInDb.BirthDate = customer.BirthDate;
             }
 
             _context.SaveChanges();
@@ -73,9 +84,8 @@ namespace Vidly.Controllers
             if (customer == null)
                 return HttpNotFound();
 
-            var viewModel = new CustomerFormViewModel
+            var viewModel = new CustomerFormViewModel(customer)
             {
-                Customer = customer,
                 MembershipTypes = _context.MembershipType.ToList()
             };
 

@@ -183,3 +183,6 @@ C:\Dev\Vidly\Vidly\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.pdb
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedMovies.resources
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Builderror.resources
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Buildfix.resources
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Changestomovie.resources

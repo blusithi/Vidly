@@ -263,6 +263,18 @@
     <Compile Include="Migrations\201706151014452_Added Movies.Designer.cs">
       <DependentUpon>201706151014452_Added Movies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706191656175_Build error.cs" />
+    <Compile Include="Migrations\201706191656175_Build error.Designer.cs">
+      <DependentUpon>201706191656175_Build error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191816190_Build fix.cs" />
+    <Compile Include="Migrations\201706191816190_Build fix.Designer.cs">
+      <DependentUpon>201706191816190_Build fix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191923539_Changes to movie.cs" />
+    <Compile Include="Migrations\201706191923539_Changes to movie.Designer.cs">
+      <DependentUpon>201706191923539_Changes to movie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -270,6 +282,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18Years.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -409,6 +422,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706151014452_Added Movies.resx">
       <DependentUpon>201706151014452_Added Movies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191656175_Build error.resx">
+      <DependentUpon>201706191656175_Build error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191816190_Build fix.resx">
+      <DependentUpon>201706191816190_Build fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191923539_Changes to movie.resx">
+      <DependentUpon>201706191923539_Changes to movie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
