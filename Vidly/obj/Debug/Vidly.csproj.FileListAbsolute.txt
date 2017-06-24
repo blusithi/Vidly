@@ -100,6 +100,10 @@ C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddGenreFields.resources
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.seedGenreData.resources
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedMoviesGenre.resources
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedMovies.resources
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedMovies.resources
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Builderror.resources
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Buildfix.resources
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Changestomovie.resources
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
 C:\Dev\Vidly\Vidly\bin\ApplicationInsights.config
 C:\Dev\Vidly\Vidly\bin\roslyn\csc.exe
@@ -182,7 +186,11 @@ C:\Dev\Vidly\Vidly\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Dev\Vidly\Vidly\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.pdb
-C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedMovies.resources
-C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Builderror.resources
-C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Buildfix.resources
-C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.Changestomovie.resources
+C:\Dev\Vidly\Vidly\bin\AutoMapper.dll
+C:\Dev\Vidly\Vidly\bin\AutoMapper.xml
+C:\Dev\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+C:\Dev\Vidly\Vidly\bin\System.Web.Http.dll
+C:\Dev\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+C:\Dev\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+C:\Dev\Vidly\Vidly\bin\System.Web.Http.xml
+C:\Dev\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
