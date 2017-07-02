@@ -8,7 +8,8 @@
 
 @Html.ActionLink("New Customer", "New", null, new { @class = "btn btn-info" } )
 
-<table id="customers" class="table table-striped table-hover ">
+
+<table id="customers" class="table table-striped table-hover">
     <thead>
         <tr>
             <th style="text-align:center">Customers</th>
@@ -18,51 +19,56 @@
         
 
     </thead>
-    <tbody>
-        @if (!Model.Any())
-        {
-            <tr><td> No Customers on Database</td></tr>
-        }
-        else
-        {
-            foreach (var customer in Model)
-            {
-                <tr><td> @Html.ActionLink(customer.Name, "Edit", new { Id = customer.Id }, null) </td>
-                    <td style="text-align:center">@customer.MembershipType.Name</td>
-        <td>
-            <button data-customer-id="@customer.Id" class="btn-link js-delete">Delete</button>
-        </td>
-                </tr>
-              
-            }
-
-        }
-
-    </tbody>
+    <tbody></tbody>
 </table>
 
 @section scripts
 {
     <script>
-    $(document).ready(function() {
-        $("#customers .js-delete").on("click", function () {
+        $(document).ready(function () {
 
-            var button = $(this);
+            $("#customers").DataTable({
+                ajax: {
+                    url: "/api/customers",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, customer) {
+                            return "<a href='/customers/edit/" + customer.id + "'>" + customer.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "name"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn-link js-delete' data-customer-id=" + data + ">Delete</button>";
+                        }
+                    }
 
-            if (confirm("Are you sure you want to delete this customer?")) {
+                ]
 
-                $.ajax({
-                    url: "api/customers/" + button.attr("data-customer-id"),
-                    method: "DELETE",
-                    success: function () {
-                        button.parents("tr").remove();
+            });
+
+            $("#customers").on("click", ".js-delete", function () {
+                var button = $(this);
+                bootbox.confirm("Are you sure you want to delete this customer?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "api/customers/" + button.attr("data-customer-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
                     }
                 });
 
-            };
+            });
 
-        })
-
-    })
+        });
     </script>
 }
