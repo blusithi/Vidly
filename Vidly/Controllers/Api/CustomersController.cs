@@ -65,7 +65,7 @@ namespace Vidly.Controllers.Api
             Mapper.Map(customerDto, customerInDb);
             db.SaveChanges();
         }
-
+        [HttpDelete]
         public void DeleteCustomer(int Id)
         {
             if(Id <= 0)
