@@ -71,17 +71,20 @@ namespace Vidly.Controllers.Api
             Mapper.Map(customerDto, customerInDb);
             db.SaveChanges();
         }
-        [HttpDelete]
-        public void DeleteCustomer(int Id)
-        {
-            if(Id <= 0)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
 
-            var customerInDb = db.Customers.SingleOrDefault(c => c.Id == Id);
-            if(customerInDb == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+        // DELETE /api/customers/1
+        [HttpDelete]
+        public IHttpActionResult DeleteCustomer(int id)
+        {
+            var customerInDb = db.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customerInDb == null)
+                return NotFound();
+
             db.Customers.Remove(customerInDb);
             db.SaveChanges();
+
+            return Ok();
         }
 
 
