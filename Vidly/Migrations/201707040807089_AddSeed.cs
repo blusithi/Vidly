@@ -13,7 +13,7 @@ namespace Vidly.Migrations
                 INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName]) VALUES (N'a4efaf08-2558-4bbd-9644-7a660f38f11e', N'administrator@vidly.com', 0, N'AGXHNjHwOGfqnZr+Ab/IdRqP/dT8fIrx/Kmn5h/myWlfV/aaGUIXi0XMdMz4Al80fg==', N'24a61009-1f76-4248-b1a9-6c6888761c22', NULL, 0, 0, NULL, 1, 0, N'administrator@vidly.com')
                 INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName]) VALUES (N'ccf8b2d5-2797-4de8-8177-d6bb65fd8fd9', N'admin@vidly.com', 0, N'ANPine8U/c4CeWpqHbmjsemNJC/e9N4UrmJdb59H1x8WCEWtn9YwLE7ZWqSQMSmvTA==', N'ae9ade2d-83d5-4039-b7fb-a520c188c60c', NULL, 0, 0, NULL, 1, 0, N'admin@vidly.com')
 
-                INSERT INTO [dbo].[AspNetRoles] ([Id], [Name]) VALUES (N'0b479677-68a0-4210-932e-99da3b59b7d6', N'CanManageMovies')
+                INSERT INTO [dbo].[AspNetRoles] ([Id], [Name]) VALUES (N'0b479677-68a0-4210-932e-99da3b59b7d6', N'CanManageCustomers')
                 INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'a4efaf08-2558-4bbd-9644-7a660f38f11e', N'0b479677-68a0-4210-932e-99da3b59b7d6')
 
                 ");

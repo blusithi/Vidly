@@ -194,3 +194,5 @@ C:\Dev\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
 C:\Dev\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
 C:\Dev\Vidly\Vidly\bin\System.Web.Http.xml
 C:\Dev\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddSeed.resources
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIDNumberToApplicationUser.resources
