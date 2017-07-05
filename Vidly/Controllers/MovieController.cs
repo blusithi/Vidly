@@ -27,12 +27,10 @@ namespace Vidly.Controllers
 
         public ActionResult New()
         {
-            var genres = _context.Genre.ToList();
-            var viewModel = new MovieFormViewModel
+          var viewModel = new MovieFormViewModel
             {
-                Genres = genres
+                Genres = _context.Genre.ToList()//used by the dropdown
             };
-
             return View("MovieForm", viewModel);
         }
 
@@ -73,9 +71,10 @@ namespace Vidly.Controllers
 
         public ViewResult Index()
         {
-            var movie = _context.Movies.Include(c => c.Genre).ToList();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
 
-            return View(movie);
+            return View("ReadOnlyList");
         }
 
 
