@@ -196,3 +196,10 @@ C:\Dev\Vidly\Vidly\bin\System.Web.Http.xml
 C:\Dev\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddSeed.resources
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIDNumberToApplicationUser.resources
+C:\Dev\Vidly\Vidly\bin\Glimpse.Ado.dll
+C:\Dev\Vidly\Vidly\bin\Glimpse.AspNet.dll
+C:\Dev\Vidly\Vidly\bin\Glimpse.Core.dll
+C:\Dev\Vidly\Vidly\bin\Glimpse.EF6.dll
+C:\Dev\Vidly\Vidly\bin\Glimpse.Mvc5.dll
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.csprojResolveAssemblyReference.cache
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedRentalandnewfieldtoMovie.resources
