@@ -196,4 +196,3 @@ C:\Dev\Vidly\Vidly\bin\System.Web.Http.xml
 C:\Dev\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddSeed.resources
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIDNumberToApplicationUser.resources
-C:\Dev\Vidly\Vidly\obj\Debug\Vidly.csprojResolveAssemblyReference.cache
