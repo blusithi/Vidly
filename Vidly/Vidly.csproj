@@ -242,6 +242,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
+    <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="DTOs\CustomerDto.cs" />
     <Compile Include="DTOs\GenreDto.cs" />
     <Compile Include="DTOs\MembershipTypeDto.cs" />
@@ -334,6 +335,10 @@
     <Compile Include="Migrations\201707061139205_Added Rental and new field to Movie.cs" />
     <Compile Include="Migrations\201707061139205_Added Rental and new field to Movie.Designer.cs">
       <DependentUpon>201707061139205_Added Rental and new field to Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707081430333_AddMovieRoles.cs" />
+    <Compile Include="Migrations\201707081430333_AddMovieRoles.Designer.cs">
+      <DependentUpon>201707081430333_AddMovieRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Rental.cs" />
@@ -470,12 +475,15 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\typeahead.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bloodhound.js" />
+    <Content Include="Scripts\bloodhound.min.js" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -560,6 +568,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\typeahead.bundle.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\typeahead.jquery.js" />
+    <Content Include="Scripts\typeahead.jquery.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -607,6 +619,7 @@
     <Content Include="Views\Movie\MovieForm.cshtml" />
     <Content Include="Views\Customers\ReadOnlyList.cshtml" />
     <Content Include="Views\Movie\ReadOnlyList.cshtml" />
+    <Content Include="Views\Rentals\NewRentalForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -683,7 +696,11 @@
     <EmbeddedResource Include="Migrations\201707061139205_Added Rental and new field to Movie.resx">
       <DependentUpon>201707061139205_Added Rental and new field to Movie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707081430333_AddMovieRoles.resx">
+      <DependentUpon>201707081430333_AddMovieRoles.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
