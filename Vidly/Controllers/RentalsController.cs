@@ -11,7 +11,7 @@ namespace Vidly.Controllers
         // GET: Rentals
         public ActionResult New()
         {
-            return View("NewRentalForm");
+            return View();
         }
     }
 }

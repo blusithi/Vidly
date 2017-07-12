@@ -24,6 +24,7 @@ namespace Vidly.Migrations
                 .Index(t => t.Movie_Id);
             
             AddColumn("dbo.Movies", "NumberAvailable", c => c.Int());
+            Sql("UPDATE Movies SET NumberAvailable = NumberInStock");
         }
         
         public override void Down()
