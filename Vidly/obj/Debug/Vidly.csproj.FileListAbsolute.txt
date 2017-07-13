@@ -203,3 +203,4 @@ C:\Dev\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMovieRoles.resources
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\Dev\Vidly\Vidly\obj\Debug\Vidly.pdb
+C:\Dev\Vidly\Vidly\obj\Debug\Vidly.csprojResolveAssemblyReference.cache
