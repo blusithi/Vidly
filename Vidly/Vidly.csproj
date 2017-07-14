@@ -507,6 +507,7 @@
     <Content Include="ConnectionSettings.config" />
     <None Include="Properties\PublishProfiles\Azure.pubxml" />
     <None Include="Properties\PublishProfiles\GodaddyProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\VidlyOnline - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />

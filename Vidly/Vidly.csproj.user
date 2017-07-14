@@ -11,7 +11,7 @@
     <ProjectView>ShowAllFiles</ProjectView>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort>44300</IISExpressSSLPort>
-    <NameOfLastUsedPublishProfile>GodaddyProfile</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>VidlyOnline - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
