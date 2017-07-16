@@ -18,6 +18,7 @@ namespace Vidly.Models
 
         [Display(Name = "Release Date")]
         [Required]
+        [DataType(DataType.Date)]
         public DateTime? ReleaseDate { get; set; }
         [Display(Name = "Date Added")]
         public DateTime? DateAdded{ get; set; }
