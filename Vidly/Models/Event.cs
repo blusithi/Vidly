@@ -34,5 +34,9 @@ namespace Vidly.Models
         [StringLength(250)]
         public string Notes { get; set; }
 
+        [Required(ErrorMessage = "Please enter Address of Event")]
+        [StringLength(150)]
+        public string Address { get; set; }
+
     }
 }
