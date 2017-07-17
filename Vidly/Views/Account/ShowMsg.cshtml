@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Show Message";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    if (String.IsNullOrEmpty(ViewBag.errorMessage))
+    {
+        <h1 class="text-danger">@ViewBag.Title</h1>
+        <h3 class="text-danger">An error occurred while processing your request.</h3>
+    }
+    else
+    {
+        <h1 class="text-success">Confirmation Email Sent Successfully</h1>
+        <h3 class="text-success">Please check your inbox (@ViewBag.EmailAddress) and click on the confirmation link. </h3>
+    }
+}
