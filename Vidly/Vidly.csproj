@@ -346,6 +346,10 @@
       <DependentUpon>201707081430333_AddMovieRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BookingStatus.cs" />
+    <Compile Include="Models\FunctionType.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\DressCode.cs" />
     <Compile Include="Models\Rental.cs" />
     <Compile Include="ViewModel\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
